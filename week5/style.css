@@ -1,0 +1,190 @@
+/* 5주차 미니 쇼핑몰 - 싱싱마켓 (컬리 참고) */
+
+/* 기본 여백 다 없애고 시작 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+/* ========== 헤더 ========== */
+/* sticky는 top 값을 꼭 줘야 붙음 */
+/* z-index 안 주면 스크롤할 때 뱃지(absolute)가 헤더 위로 올라옴 */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white; /* 배경색 없으면 뒤에 상품이 비쳐 보임 */
+  border-bottom: 1px solid #ddd;
+
+  /* 로고 / 메뉴 / 장바구니 가로로 배치 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 calc(50% - 525px); /* 내용을 가운데 1050px에 맞추려고 양옆 여백 계산 */
+}
+
+header h1 {
+  font-size: 28px;
+}
+
+header h1 a {
+  color: #3a7d44;
+}
+
+nav ul {
+  display: flex;
+  gap: 40px;
+}
+
+nav a {
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #3a7d44;
+}
+
+/* 장바구니 (header 바로 밑에 있는 a) */
+header > a {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+}
+
+
+/* ========== 메인 배너 ========== */
+#banner {
+  height: 400px;
+  /* background 단축형: 반투명 검정을 사진 위에 한 겹 더 깔아서 글씨 잘 보이게 */
+  /* 쉼표로 여러 개 쓰면 먼저 쓴 게 위로 올라감 */
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(images/banner.jpg) no-repeat center / cover;
+
+  /* 문구 상하좌우 가운데 정렬 */
+  display: flex;
+  flex-direction: column; /* 제목 문구 버튼을 세로로 쌓기 */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+#banner h2 {
+  font-size: 40px;
+}
+
+#banner p {
+  font-size: 18px;
+  margin: 10px 0 25px;
+}
+
+#banner a {
+  background-color: #3a7d44;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 5px;
+}
+
+
+/* ========== 상품 목록 ========== */
+#products {
+  width: 1050px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+#products h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* grid로 한 줄에 4개씩 */
+#products ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px 20px;
+}
+
+/* 부모에 relative 줘야 뱃지가 여기 기준으로 붙음 */
+#products li {
+  position: relative;
+}
+
+#products img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+#products strong {
+  display: block; /* strong은 inline이라 줄바꿈 하려고 */
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* 뱃지 왼쪽 위에 띄우기 */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.sale {
+  background-color: #fa622f;
+}
+
+.new {
+  background-color: #3a7d44;
+}
+
+
+/* ========== 푸터 ========== */
+footer {
+  background-color: #f7f7f7;
+  padding: 40px calc(50% - 525px);
+  color: #999;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* dt랑 dd를 한 줄에 나란히 (grid 2칸) */
+footer dl {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  margin-top: 15px;
+}
+
+footer dt {
+  color: #333;
+  font-weight: bold;
+}

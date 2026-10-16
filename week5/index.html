@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>싱싱마켓</title>
+    <!-- 구글 폰트를 연결해도 좋습니다 (선택) -->
+    <!-- CSS 는 style.css 파일에 작성하고 여기에 연결하세요 -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <!-- 헤더 -->
+    <header>
+      <h1>
+        <a href="#">싱싱마켓</a>
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="#">신상품</a></li>
+          <li><a href="#">베스트</a></li>
+          <li><a href="#">세일</a></li>
+          <li><a href="#">이벤트</a></li>
+        </ul>
+      </nav>
+      <a href="#">장바구니 (0)</a>
+    </header>
+
+    <main>
+      <!-- 메인 배너 -->
+      <!-- id가 두 개 다 section이라 검사툴에서 오류 나서 다르게 바꿈 -->
+      <section id="banner">
+        <h2>내일 아침 문 앞에 도착!</h2>
+        <p>밤 11시 전에 주문하면 다음 날 아침 7시 전에 배송해드려요</p>
+        <a href="#">장보러 가기</a>
+      </section>
+
+      <!-- 상품 목록 -->
+      <section id="products">
+        <!-- h2 다음에 h4가 와서 오류 나길래 h2로 바꿈 -->
+        <h2>추천 상품</h2>
+        <ul>
+          <li>
+            <span class="badge new">NEW</span>
+            <img src="images/grape.jpg" alt="연두색 청포도 송이">
+            <strong>샤인머스캣 1송이 700g</strong>
+            <span class="price">15,900원</span>
+          </li>
+          <li>
+            <span class="badge sale">SALE</span>
+            <img src="images/strawberry.jpg" alt="빨간 딸기가 가득 담긴 모습">
+            <strong>설향 딸기 500g</strong>
+            <span class="price">8,900원</span>
+          </li>
+          <li>
+            <img src="images/egg.jpg" alt="달걀판에 담긴 갈색 달걀">
+            <strong>무항생제 유정란 10구</strong>
+            <span class="price">5,900원</span>
+          </li>
+          <li>
+            <span class="badge new">NEW</span>
+            <img src="images/salmon.jpg" alt="도마 위에 놓인 생연어 두 조각">
+            <strong>노르웨이 생연어 300g</strong>
+            <span class="price">18,900원</span>
+          </li>
+          <li>
+            <img src="images/milk.jpg" alt="유리병에 담긴 우유">
+            <strong>1등급 우유 900ml</strong>
+            <span class="price">2,980원</span>
+          </li>
+          <li>
+            <span class="badge sale">SALE</span>
+            <img src="images/beef.jpg" alt="검은 접시 위에 놓인 소고기 스테이크">
+            <strong>1++ 한우 등심 200g</strong>
+            <span class="price">29,900원</span>
+          </li>
+          <li>
+            <img src="images/bread.jpg" alt="천 위에 놓인 통밀 식빵">
+            <strong>매일 굽는 통밀 식빵</strong>
+            <span class="price">4,500원</span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer>
+      <small>© 2026 싱싱마켓</small>
+      <dl>
+        <dt>고객센터</dt>
+        <dd>1234-5678</dd>
+        <dt>주소</dt>
+        <!-- dl 안에는 li 말고 dd 써야 해서 바꿈 -->
+        <dd>제주특별자치도 제주시 제주대학로 102</dd>
+        <dt>사진 출처</dt>
+        <dd>Openverse 퍼블릭 도메인(CC0) 사진</dd>
+      </dl>
+    </footer>
+  </body>
+</html>
